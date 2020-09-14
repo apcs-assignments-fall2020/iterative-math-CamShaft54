@@ -5,9 +5,11 @@ public class MyMain {
     // Calculates the square root iteratively, using the Babylonian method
     public static double babylonian(double x) {
         // REPLACE WITH YOUR CODE HERE
-        double m = 1;
-        while (Math.abs(m - Math.sqrt(x)) > 0.00001) {
-            m = (m + x/m) / 2;
+        double m = 2;
+        double n = 1;
+        while (Math.abs(m - n) > 0.00001) {
+            n = m;
+            m = (n + x/n) / 2;
         }
         return m;
     }
